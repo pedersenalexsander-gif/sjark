@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07181e">
+  <meta name="description" content="Amundsen Joss & Ball – en sjark og en balje. Garnfiske etter kvitfisk i Lofoten.">
+  <title>Amundsen Joss & Ball | Lofoten</title>
+  <style>
+    :root{--ink:#06171d;--deep:#09252d;--sea:#0d4855;--foam:#eef5f2;--white:#fff;--orange:#ff5b27;--yellow:#f6c847;--muted:#a7bcc2;--line:rgba(255,255,255,.12)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--ink);color:var(--foam);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+    .nav{position:fixed;z-index:40;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,52px);background:linear-gradient(180deg,rgba(4,18,23,.88),transparent);backdrop-filter:blur(3px)}
+    .brand{font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.86rem}.navlinks{display:flex;gap:22px;font-size:.88rem;color:#d7e4e6}.navlinks a:hover{color:var(--yellow)}
+    .hero{min-height:100svh;position:relative;display:grid;align-items:end;overflow:hidden}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.78) contrast(1.08) brightness(.58)}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,10,14,.15) 15%,rgba(5,18,23,.35) 52%,#06171d 100%),linear-gradient(90deg,rgba(2,15,20,.6),transparent 65%)}
+    .hero-content{position:relative;z-index:2;padding:120px clamp(20px,7vw,100px) 90px;max-width:1100px}.kicker{display:inline-flex;gap:9px;align-items:center;padding:9px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(5,21,27,.3);font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 18px var(--orange)}
+    h1{font-size:clamp(3.3rem,10vw,9.5rem);line-height:.83;margin:24px 0 28px;letter-spacing:-.065em;text-transform:uppercase;max-width:1000px}.hero p{font-size:clamp(1.1rem,2vw,1.5rem);max-width:660px;line-height:1.5;color:#d8e4e4}.hero strong{color:#fff}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:14px 18px;border-radius:10px;font-weight:850;border:1px solid rgba(255,255,255,.16);background:#fff;color:#06171d}.btn.alt{background:rgba(255,255,255,.07);color:#fff;backdrop-filter:blur(8px)}
+    section{padding:96px clamp(20px,7vw,100px)}.eyebrow{color:var(--yellow);text-transform:uppercase;font-size:.76rem;letter-spacing:.16em;font-weight:900;margin-bottom:12px}.section-title{font-size:clamp(2.2rem,5vw,5rem);line-height:.95;letter-spacing:-.05em;margin:0 0 24px}.lead{max-width:780px;color:#bfd0d4;line-height:1.75;font-size:1.05rem}
+    .intro{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}.intro-card{background:linear-gradient(145deg,#0b2a33,#081d24);border:1px solid var(--line);padding:32px;border-radius:24px;position:relative;overflow:hidden}.intro-card:after{content:"AJ&B";position:absolute;right:-12px;bottom:-30px;font-size:8rem;font-weight:1000;opacity:.035}.quote{font-size:clamp(1.6rem,3vw,3rem);line-height:1.05;font-weight:900;margin:0}.quote span{color:var(--orange)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:42px}.stat{padding:25px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}.stat b{display:block;font-size:clamp(1.5rem,3vw,2.5rem);letter-spacing:-.04em}.stat small{color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{min-height:460px;border-radius:26px;overflow:hidden;position:relative;border:1px solid var(--line)}.panel img{width:100%;height:100%;object-fit:cover}.panel .overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(3,15,20,.92));display:flex;align-items:end;padding:30px}.panel h3{font-size:2rem;margin:0 0 8px}.panel p{margin:0;color:#d2dfe1;line-height:1.55}
+    .facts{background:#eef4f2;color:#07181e}.facts .eyebrow{color:#d44c1c}.facts .lead{color:#38515a}.factgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}.fact{padding:28px;border:1px solid #cfdcda;border-radius:20px;background:#fff}.fact .num{font-size:3rem;font-weight:1000;line-height:1;color:#0c5361}.fact h3{margin:16px 0 8px;font-size:1.15rem}.fact p{margin:0;color:#4c6268;line-height:1.6}.source{font-size:.74rem;color:#60757a;margin-top:12px}.source a{text-decoration:underline}
+    .gear{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}.steps{display:grid;gap:12px}.step{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}.step b{height:42px;width:42px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:white}.step h3{margin:2px 0 6px}.step p{margin:0;color:#aebfc4;line-height:1.55}
+    .money{padding:70px clamp(20px,7vw,100px);background:var(--yellow);color:#111}.money-wrap{display:flex;align-items:end;justify-content:space-between;gap:30px;flex-wrap:wrap}.money-label{text-transform:uppercase;font-weight:900;letter-spacing:.12em;font-size:.8rem}.money-big{font-size:clamp(3rem,8vw,8rem);font-weight:1000;line-height:.86;letter-spacing:-.07em;max-width:1000px}.money small{display:block;margin-top:14px;opacity:.58}
+    .gallery{padding-bottom:120px}.gallery-grid{columns:4 250px;column-gap:12px;margin-top:34px}.shot{break-inside:avoid;margin:0 0 12px;border-radius:16px;overflow:hidden;cursor:zoom-in;background:#0c2831;border:1px solid var(--line)}.shot img{width:100%;height:auto;transition:transform .45s ease,filter .45s ease}.shot:hover img{transform:scale(1.025);filter:brightness(1.08)}
+    footer{padding:40px clamp(20px,7vw,100px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;color:#91aab0;font-size:.84rem}.footer-brand{font-weight:950;color:#fff;text-transform:uppercase;letter-spacing:.08em}
+    .modal{position:fixed;inset:0;z-index:100;background:rgba(2,8,11,.94);display:none;place-items:center;padding:24px}.modal.open{display:grid}.modal img{max-height:90vh;max-width:92vw;border-radius:14px}.close{position:absolute;top:22px;right:26px;border:0;background:rgba(255,255,255,.1);color:white;width:44px;height:44px;border-radius:50%;font-size:1.7rem;cursor:pointer}
+    .ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);white-space:nowrap}.ticker-track{display:inline-block;padding:14px 0;animation:move 24s linear infinite;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:#a7bdc2}.ticker-track span{margin-right:42px}.ticker-track i{color:var(--orange);font-style:normal}@keyframes move{to{transform:translateX(-50%)}}
+    @media(max-width:850px){.navlinks{display:none}.intro,.split,.gear{grid-template-columns:1fr}.stats,.factgrid{grid-template-columns:1fr 1fr}.panel{min-height:360px}.hero-content{padding-bottom:60px}}
+    @media(max-width:520px){section{padding-top:72px;padding-bottom:72px}.stats,.factgrid{grid-template-columns:1fr}.gallery-grid{columns:2 150px}.hero h1{font-size:3.35rem}.money-big{font-size:3.7rem}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><a class="brand" href="#top">Amundsen Joss & Ball</a><div class="navlinks"><a href="#oss">Oss</a><a href="#fisket">Fisket</a><a href="#fakta">Kvitfisk</a><a href="#bilder">Bilder</a></div></nav>
+
+  <main id="top">
+    <header class="hero">
+      <img src="assets/02.jpg" alt="Fisker med stor torsk om bord i sjark i Lofoten">
+      <div class="hero-content">
+        <div class="kicker"><span class="dot"></span> Lofoten · Garn · Kvitfisk</div>
+        <h1>Én sjark.<br>Én balje.</h1>
+        <p><strong>Amundsen Joss & Ball</strong> fisker kvitfisk med garn i Lofoten. Salt sjø, kalde hender, fulle garn og akkurat passe mye system i kaoset.</p>
+        <div class="cta"><a class="btn" href="#bilder">Se livet på sjøen</a><a class="btn alt" href="#fisket">Hvordan vi fisker</a></div>
+      </div>
+    </header>
+
+    <div class="ticker"><div class="ticker-track"><span>GARNFISKE <i>✦</i></span><span>KVITFISK <i>✦</i></span><span>LOFOTEN <i>✦</i></span><span>EN SJARK OG EN BALJE <i>✦</i></span><span>GARNFISKE <i>✦</i></span><span>KVITFISK <i>✦</i></span><span>LOFOTEN <i>✦</i></span><span>EN SJARK OG EN BALJE <i>✦</i></span></div></div>
+
+    <section id="oss">
+      <div class="intro">
+        <div>
+          <div class="eyebrow">Amundsen Joss & Ball</div>
+          <h2 class="section-title">Lite opplegg.<br>Store ambisjoner.</h2>
+          <p class="lead">Oppskriften er enkel: en sjark, en balje, garn og Lofothavet. Vi driver garnfiske etter kvitfisk og tar dagene slik de kommer – styrt av vær, sjø, fisk og hvor mye kaffe som finnes igjen.</p>
+          <div class="stats"><div class="stat"><b>1</b><small>sjark</small></div><div class="stat"><b>1</b><small>balje</small></div><div class="stat"><b>100%</b><small>Lofoten</small></div><div class="stat"><b>∞</b><small>pågangsmot</small></div></div>
+        </div>
+        <div class="intro-card"><p class="quote">«Det trenger ikke være svært for å være <span>seriøst fiske.</span>»</p><p class="lead">Her handler det om å få redskapen i sjøen, få fisken om bord og gjøre jobben skikkelig.</p></div>
+      </div>
+    </section>
+
+    <section id="fisket">
+      <div class="eyebrow">Slik ser det ut</div><h2 class="section-title">Fra garn til kai.</h2>
+      <div class="split">
+        <article class="panel"><img src="assets/04.jpg" alt="Garn og utstyr i sjarken"><div class="overlay"><div><h3>Garnarbeidet</h3><p>Garn settes der fisken forventes å gå. Når redskapen tas opp igjen, følger sortering, bløgging og håndtering om bord.</p></div></div></article>
+        <article class="panel"><img src="assets/05.jpg" alt="Liten sjark med fiskere på havet"><div class="overlay"><div><h3>Lofothavet</h3><p>Små fartøy har i generasjoner vært en del av Lofotfisket. Vær, strøm, dybde og fiskens vandring avgjør hvordan arbeidsdagen blir.</p></div></div></article>
+      </div>
+    </section>
+
+    <section class="facts" id="fakta">
+      <div class="eyebrow">Fakta om skrei og Lofoten</div><h2 class="section-title">Hvorfor fisken kommer hit.</h2>
+      <p class="lead">Nordøstarktisk torsk – skrei – lever store deler av livet i Barentshavet og vandrer mot norskekysten for å gyte. Lofoten og Vesterålen er blant de viktigste gyteområdene.</p>
+      <div class="factgrid">
+        <article class="fact"><div class="num">Mar–Apr</div><h3>Hovedgyting</h3><p>Havforskningsinstituttet oppgir mars–april som hovedperioden for gyting hos nordøstarktisk torsk.</p><div class="source">Kilde: <a href="https://www.hi.no/hi/temasider/arter/torsk-nordaustarktisk-skrei" target="_blank" rel="noopener">Havforskningsinstituttet</a></div></article>
+        <article class="fact"><div class="num">L/V</div><h3>Viktig gyteområde</h3><p>Vesterålen og Lofoten regnes som de viktigste gytefeltene for skrei. Egg og larver driver senere med strømmen inn mot Barentshavet.</p><div class="source">Kilde: <a href="https://www.hi.no/hi/temasider/arter/torsk-nordaustarktisk-skrei" target="_blank" rel="noopener">Havforskningsinstituttet</a></div></article>
+        <article class="fact"><div class="num">Garn</div><h3>Tradisjonelt redskap</h3><p>Garn er et sentralt redskap i kystfisket etter torsk. Fangsten må håndteres skånsomt og effektivt for å bevare kvaliteten.</p><div class="source">Kilde: <a href="https://www.rafisklaget.no/nyheter/aarets-kvalitetsfisker-2022" target="_blank" rel="noopener">Norges Råfisklag</a></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="gear">
+        <div><div class="eyebrow">Garnfiske</div><h2 class="section-title">Jobben er mer enn å dra fisk.</h2><p class="lead">Garnfiske er en hel kjede av arbeid. Redskapen skal klargjøres, settes, passes, trekkes og ryddes. Fangsten skal samtidig håndteres raskt og ordentlig.</p></div>
+        <div class="steps">
+          <div class="step"><b>1</b><div><h3>Klargjøring</h3><p>Garn, tauverk, blåser og utstyr gjøres klart før avgang.</p></div></div>
+          <div class="step"><b>2</b><div><h3>Setting</h3><p>Garnene settes i sjøen på valgt felt, tilpasset forholdene og fisket.</p></div></div>
+          <div class="step"><b>3</b><div><h3>Haling</h3><p>Garnene trekkes om bord igjen, og fangsten tas løs mens redskapen gjøres klar på nytt.</p></div></div>
+          <div class="step"><b>4</b><div><h3>Fangsthåndtering</h3><p>God bløgging, kjøling og skånsom behandling er viktig for kvaliteten på fersk fisk.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="money"><div class="money-wrap"><div><div class="money-label">Årlig omsetning</div><div class="money-big">FOR JÆVLIG MYE.</div><small>Uoffisielt tall. Svært vitenskapelig beregnet.</small></div><div style="font-size:4rem">💸🐟</div></div></section>
+
+    <section class="gallery" id="bilder">
+      <div class="eyebrow">Galleri</div><h2 class="section-title">Sjø, sjark og fullt kjør.</h2><p class="lead">Et lite arkiv fra fisket, båten og folkan rundt det.</p>
+      <div class="gallery-grid">
+        <figure class="shot"><img src="assets/01.jpg" alt="Fisker med hodelykt"></figure>
+        <figure class="shot"><img src="assets/02.jpg" alt="Fisker med torsk"></figure>
+        <figure class="shot"><img src="assets/03.jpg" alt="Sjark ved kai"></figure>
+        <figure class="shot"><img src="assets/04.jpg" alt="Garn i sjark"></figure>
+        <figure class="shot"><img src="assets/05.jpg" alt="Sjark på sjøen"></figure>
+        <figure class="shot"><img src="assets/06.jpg" alt="Portrett"></figure>
+        <figure class="shot"><img src="assets/07.jpg" alt="Fisker i arbeidsklær"></figure>
+        <figure class="shot"><img src="assets/08.jpg" alt="Portrett ute"></figure>
+        <figure class="shot"><img src="assets/09.jpg" alt="Arbeid om bord om natten"></figure>
+        <figure class="shot"><img src="assets/10.jpg" alt="Portrett"></figure>
+        <figure class="shot"><img src="assets/11.jpg" alt="Portrett i Lofoten"></figure>
+        <figure class="shot"><img src="assets/12.jpg" alt="Fisker med hodelykt"></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer><div><div class="footer-brand">Amundsen Joss & Ball</div><div>En sjark og en balje · Lofoten</div></div><div>Fagkilder: Havforskningsinstituttet · Norges Råfisklag</div></footer>
+
+  <div class="modal" id="modal"><button class="close" aria-label="Lukk">×</button><img id="modalImg" alt="Forstørret bilde"></div>
+  <script>
+    const modal=document.getElementById('modal'), modalImg=document.getElementById('modalImg');
+    document.querySelectorAll('.shot img').forEach(img=>img.addEventListener('click',()=>{modalImg.src=img.src;modalImg.alt=img.alt;modal.classList.add('open')}));
+    document.querySelector('.close').addEventListener('click',()=>modal.classList.remove('open'));
+    modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+    addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+  </script>
+</body>
+</html>
